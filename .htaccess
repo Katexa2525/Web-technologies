@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+#Защищает файл no_page.html
+<files "no_page.html">
+order allow,deny
+deny from all
+</files>
+
+#403 Доступ запрещен
+ErrorDocument 403 /403.html
+#404 Страница не найдена
+ErrorDocument 404 /404.html
